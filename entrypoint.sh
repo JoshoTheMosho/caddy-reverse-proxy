@@ -2,6 +2,13 @@
 
 set -euo pipefail
 
+echo BACKEND_DOMAIN
+echo BACKEND_HOST
+echo BACKEND_PORT
+echo FRONTEND_DOMAIN
+echo FRONTEND_HOST
+echo FRONTEND_PORT
+
 # for backwards compatibility, seperates host and port from url
 export FRONTEND_DOMAIN=${FRONTEND_DOMAIN:-${FRONTEND_HOST%:*}}
 export FRONTEND_PORT=${FRONTEND_PORT:-${FRONTEND_HOST##*:}}
